@@ -25,7 +25,7 @@
 </p>
 
 ********************
-<p align="center"><b><a href="https://anirbanmu.com/hugo-sustain-vitae/">Sustain-vitae Live Demo</a></b></p>
+<p align="center"><b><a href="https://anirbanmu.github.io/hugo-sustain-vitae/">Sustain-vitae Live Demo</a></b></p>
 
 ## Installation
 
