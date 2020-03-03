@@ -6,6 +6,8 @@
       {{ partial "header" . }}
       {{ if (ne (strings.TrimSuffix "/projects/" .URL) .URL) }}
         {{ .Render "projects" }}
+      {{ else if (ne (strings.TrimSuffix "/creative/" .URL) .URL) }}
+        {{ .Render "creative" }}
       {{ else if (ne (strings.TrimSuffix "/vitae/" .URL) .URL) }}
         {{ .Render "vitae" }}
       {{ else }}

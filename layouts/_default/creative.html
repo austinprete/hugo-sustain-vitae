@@ -1,0 +1,31 @@
+<section id="creative">
+  <div class="container">
+    <h3>{{ .Site.Data.music.name }}</h3>
+    <div class="panel panel-default">
+      <div class="panel-body" style="text-align: center">
+      {{ range $i, $el := .Site.Data.music.source }}
+        <h5 style="text-align: center">
+          <!-- <i class="{{ .icon }}"></i>&nbsp;&nbsp; -->
+          <strong><a href="{{ $el.link }}">{{ $el.title }}</a>{{ if isset $el "description" }}</strong>&nbsp;-&nbsp;{{ $el.description }}{{ end }}
+        </h5>
+         <!-- <img style="max-width:100px" src="/img/{{ $el.img }}" alt={{ $el.title }}> -->
+
+      {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h3>{{ .Site.Data.art.name }}</h3>
+    <div class="panel panel-default">
+      <div class="panel-body" style="text-align: center">
+      {{ range $i, $el := .Site.Data.art.source }}
+        <h5 style="text-align: center">
+          <!-- <i class="{{ .icon }}"></i>&nbsp;&nbsp; -->
+          <strong>{{ $el.title }}{{ if isset $el "description" }}</strong>&nbsp;-&nbsp;{{ $el.description }}{{ end }}
+        </h5>
+        <img style="width: 95%; max-width:600px" src="/img/{{ $el.img }}" alt={{ $el.title }}>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
