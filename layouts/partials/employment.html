@@ -11,6 +11,11 @@
         </span>
       </header>
       <p>{{ .description }}</p>
+      {{ range .bullets }}
+      <ul>
+        <li>{{ . }}</li>
+      </ul>
+      {{ end }}
     </article>
     {{ end }}
   </section>
