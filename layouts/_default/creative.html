@@ -4,12 +4,13 @@
     <div class="panel panel-default">
       <div class="panel-body" style="text-align: center">
       {{ range $i, $el := .Site.Data.music.source }}
+        <hr/>      
         <h5 style="text-align: center">
           <!-- <i class="{{ .icon }}"></i>&nbsp;&nbsp; -->
           <strong><a href="{{ $el.link }}">{{ $el.title }}</a>{{ if isset $el "description" }}</strong>&nbsp;-&nbsp;{{ $el.description }}{{ end }}
         </h5>
+        {{ $el.embed | safeHTML }}
          <!-- <img style="max-width:100px" src="/img/{{ $el.img }}" alt={{ $el.title }}> -->
-
       {{ end }}
       </div>
     </div>
@@ -19,6 +20,7 @@
     <div class="panel panel-default">
       <div class="panel-body" style="text-align: center">
       {{ range $i, $el := .Site.Data.art.source }}
+        <hr/>
         <h5 style="text-align: center">
           <!-- <i class="{{ .icon }}"></i>&nbsp;&nbsp; -->
           <strong>{{ $el.title }}{{ if isset $el "description" }}</strong>&nbsp;-&nbsp;{{ $el.description }}{{ end }}
